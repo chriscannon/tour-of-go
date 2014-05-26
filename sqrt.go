@@ -7,7 +7,7 @@ import (
 
 const delta = 1e-15
 
-func Sqrt(x float64) (float64, int) {
+func sqrt(x float64) (float64, int) {
 	z := x
 	p := 0.0
 	iteration := 1
@@ -22,9 +22,9 @@ func Sqrt(x float64) (float64, int) {
 
 func main() {
 	const val = 10.0
-	z, iteration := Sqrt(val)
-	z_math := math.Sqrt(val)
-	fmt.Printf("%d iterations square root: %v\n", iteration, z)
-	fmt.Printf("math package square root: %v\n", z_math)
-	fmt.Printf("diff: %v\n", math.Abs(z-z_math))
+	myFunc, iteration := sqrt(val)
+	goFunc := math.Sqrt(val)
+	fmt.Printf("%d iterations square root: %v\n", iteration, myFunc)
+	fmt.Printf("math package square root: %v\n", goFunc)
+	fmt.Printf("diff: %v\n", math.Abs(myFunc-goFunc))
 }
