@@ -2,9 +2,8 @@ package main
 
 import "fmt"
 
-// fibonacci is a function that returns
-// a function that returns an int.
-func fibonacci() func() int {
+// Fibonacci is a function that returns a function that returns an int.
+func Fibonacci() func() int {
 	fibOne, fibTwo := 0, 1
 	return func() int {
 		fibOne, fibTwo = fibTwo, fibOne+fibTwo
@@ -13,7 +12,7 @@ func fibonacci() func() int {
 }
 
 func main() {
-	f := fibonacci()
+	f := Fibonacci()
 	for i := 0; i < 10; i++ {
 		fmt.Println(f())
 	}

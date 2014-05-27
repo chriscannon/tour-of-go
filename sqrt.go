@@ -7,7 +7,8 @@ import (
 
 const delta = 1e-15
 
-func sqrt(x float64) (float64, int) {
+// Sqrt is a function that returns the square root of a float64 using Netwon's method.
+func Sqrt(x float64) (float64, int) {
 	z := x
 	p := 0.0
 	iteration := 1
@@ -22,7 +23,7 @@ func sqrt(x float64) (float64, int) {
 
 func main() {
 	const val = 10.0
-	myFunc, iteration := sqrt(val)
+	myFunc, iteration := Sqrt(val)
 	goFunc := math.Sqrt(val)
 	fmt.Printf("%d iterations square root: %v\n", iteration, myFunc)
 	fmt.Printf("math package square root: %v\n", goFunc)

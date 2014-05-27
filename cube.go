@@ -7,6 +7,7 @@ import (
 
 const delta = 1e-15
 
+// Cbrt computes the cube root of a number using Newton's method.
 func Cbrt(x complex128) complex128 {
 	switch x {
 	case 0:

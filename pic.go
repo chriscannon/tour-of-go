@@ -2,6 +2,7 @@ package main
 
 import "code.google.com/p/go-tour/pic"
 
+// Pic is a function that returns a uint8 slice of uint8 slices for the function (x + y) / 2.
 func Pic(dx, dy int) [][]uint8 {
 	s := make([][]uint8, dy)
 	for i := range s {
