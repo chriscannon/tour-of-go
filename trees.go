@@ -6,7 +6,7 @@ import (
 	"code.google.com/p/go-tour/tree"
 )
 
-func traverse(t *tree, ch chan int) {
+func traverse(t *tree.Tree, ch chan int) {
 	if t.Left != nil {
 		traverse(t, ch)
 	}
@@ -25,7 +25,9 @@ func Walk(t *tree.Tree, ch chan int) {
 
 // Same determines whether the trees
 // t1 and t2 contain the same values.
-func Same(t1, t2 *tree.Tree) bool
+func Same(t1, t2 *tree.Tree) bool {
+	return true
+}
 
 func main() {
 	ch := make(chan int)
