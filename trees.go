@@ -8,11 +8,11 @@ import (
 
 func traverse(t *tree.Tree, ch chan int) {
 	if t.Left != nil {
-		traverse(t, ch)
+		traverse(t.Left, ch)
 	}
 	fmt.Println(t.Value)
 	if t.Right != nil {
-		traverse(t, ch)
+		traverse(t.Right, ch)
 	}
 }
 
